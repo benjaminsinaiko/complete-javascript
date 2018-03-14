@@ -276,7 +276,7 @@ if (john.indexOf("teacher") === -1) {
 
 ////////////////////////////////////////
 //Lecture: objects
-
+/*
 var john = {
   name: "John",
   lastName: "Smith",
@@ -304,3 +304,60 @@ jane["job"] = "retired";
 jane["isMarried"] = true;
 
 console.log(jane);
+*/
+
+////////////////////////////////////////
+//Lecture: objects and methods
+
+// v1.
+/*
+var john = {
+  name: "John",
+  lastName: "Smith",
+  yearOfBirth: 1990,
+  job: "teacher",
+  isMarried: false,
+  family: ["Jane", "Mark", "Bob"],
+  calculateAge: function() {
+    return 2018 - this.yearOfBirth;
+  }
+};
+
+console.log(john.calculateAge());
+// Objects can call functions - they're called Methods
+
+var age = john.calculateAge();
+john.age = age;
+console.log(john);
+*/
+
+// v2.0
+var john = {
+  name: "John",
+  lastName: "Smith",
+  yearOfBirth: 1990,
+  job: "teacher",
+  isMarried: false,
+  family: ["Jane", "Mark", "Bob"],
+  calculateAge: function() {
+    this.age = 2018 - this.yearOfBirth;
+  }
+};
+
+john.calculateAge();
+console.log(john);
+
+var mike = {
+  name: "Mike",
+  lastName: "Smith",
+  yearOfBirth: 1950,
+  job: "teacher",
+  isMarried: false,
+  family: ["Jane", "Mark", "Bob"],
+  calculateAge: function() {
+    this.age = 2018 - this.yearOfBirth;
+  }
+};
+
+mike.calculateAge();
+console.log(mike);
