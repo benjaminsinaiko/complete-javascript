@@ -1,4 +1,4 @@
-//Lecture: variables
+//Lecture: Variables
 /*
 var name = "John";
 console.log(name);
@@ -16,7 +16,7 @@ console.log(fullAge);
 /*
 
 ////////////////////////////////////////
-Lecture: variables 2
+Lecture: Variables 2
 var name = "John";
 var age = 26;
 
@@ -73,7 +73,7 @@ alert(
 /*
 
 ////////////////////////////////////////
-// Lecture operators
+// Lecture: Operators
 var now = 2018;
 var birthYear = now - 26;
 
@@ -126,7 +126,7 @@ if (23 === "23") {
 
 /*
 ////////////////////////////////////////
-//Lecture: boolean logic and switch
+//Lecture: Boolean logic and switch
 
 var age = 31;
 
@@ -203,7 +203,7 @@ if (player1Score > player2Score && player1Score > player3Score) {
 */
 
 ////////////////////////////////////////
-//Lecture: functions
+//Lecture: Functions
 /*
 function calculateAge(yearOfBirth) {
   var age = 2018 - yearOfBirth;
@@ -230,7 +230,7 @@ yearsUntilRetirement("Mary", 1948);
 */
 
 ////////////////////////////////////////
-//Lecture: statements and expressions
+//Lecture: Statements and expressions
 /*
 // function statment
 function someFun(par) {
@@ -252,7 +252,7 @@ var x = 3;
 */
 
 ////////////////////////////////////////
-//Lecture: arrays
+//Lecture: Arrays
 /*
 var names = ["John", "Jane", "Mark"];
 var years = new Array(1990, 1969, 1948);
@@ -275,7 +275,7 @@ if (john.indexOf("teacher") === -1) {
 */
 
 ////////////////////////////////////////
-//Lecture: objects
+//Lecture: Objects
 /*
 var john = {
   name: "John",
@@ -307,7 +307,7 @@ console.log(jane);
 */
 
 ////////////////////////////////////////
-//Lecture: objects and methods
+//Lecture: Objects and methods
 
 // v1.
 /*
@@ -329,7 +329,7 @@ console.log(john.calculateAge());
 var age = john.calculateAge();
 john.age = age;
 console.log(john);
-*/
+
 
 // v2.0
 var john = {
@@ -361,3 +361,36 @@ var mike = {
 
 mike.calculateAge();
 console.log(mike);
+*/
+
+////////////////////////////////////////
+//Lecture: Loops
+/*
+for (var i = 0; i < 10; i++) {
+  console.log(i);
+}
+*/
+var names = ["John", "Jane", "Mary", "Mark", "Bob"];
+/*
+// for loops
+for (var j = 0; j < names.length; j++) {
+  console.log(names[j]);
+}
+
+for (var k = names.length - 1; k >= 0; k--) {
+  console.log(names[k]);
+}
+*/
+// while loops
+var i = 0;
+while (i < names.length) {
+  console.log(names[i]);
+  i++;
+}
+
+for (var k = 1; k <= 5; k++) {
+  if (k === 3) {
+    continue;
+  }
+  console.log(k);
+}
