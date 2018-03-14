@@ -124,6 +124,7 @@ if (23 === "23") {
 }
 */
 
+/*
 ////////////////////////////////////////
 //Lecture: boolean logic and switch
 
@@ -151,4 +152,50 @@ switch (job) {
     break;
   default:
     console.log("John does something else");
+}
+*/
+
+////////////////////////////////////////
+// CODING CHALLENGE 1
+
+/*
+John and a friend invented a simple game where the player with the highest value of his height (in centimeters) plus five times his age wins (what a silly game :)
+
+1. Create variables for the heights and ages of two friends and assign them some values
+2. Calculate their scores
+3. Decide who wins and print the winner to the console. Include the score in the string that you output to the console. Don't forget that there can be a draw (both players wit the same score).
+
+4. EXTRA: Add a third plaer and now decide who wins. Hint: you will need the && operator to take the decision. If you can't solve this one, just watch the solution it's no problem :)
+*/
+
+var player1Height = 200;
+var player2Height = 200;
+var player3Height = 200;
+
+var player1Age = 20;
+var player2Age = 20;
+var player3Age = 20;
+
+var player1Score = player1Height * 2 + player1Age;
+var player2Score = player2Height * 2 + player2Age;
+var player3Score = player3Height * 2 + player3Age;
+
+/*
+if (player1Score > player2Score) {
+  console.log("Player 1 wins with a score of " + player1Score);
+} else if (player1Score < player2Score) {
+  console.log("Player 2 wins with a score of " + player2Score);
+} else {
+  console.log("It's a tie");
+}
+*/
+
+if (player1Score > player2Score && player1Score > player3Score) {
+  console.log("Player 1 wins with a score of " + player1Score);
+} else if (player2Score > player1Score && player2Score > player3Score) {
+  console.log("Player 2 wins with a score of " + player2Score);
+} else if (player3Score > player1Score && player3Score > player2Score) {
+  console.log("Player 3 wins with a score of " + player3Score);
+} else {
+  console.log("It's a tie");
 }
