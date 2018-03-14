@@ -168,6 +168,7 @@ John and a friend invented a simple game where the player with the highest value
 4. EXTRA: Add a third plaer and now decide who wins. Hint: you will need the && operator to take the decision. If you can't solve this one, just watch the solution it's no problem :)
 */
 
+/*
 var player1Height = 200;
 var player2Height = 200;
 var player3Height = 200;
@@ -180,7 +181,7 @@ var player1Score = player1Height * 2 + player1Age;
 var player2Score = player2Height * 2 + player2Age;
 var player3Score = player3Height * 2 + player3Age;
 
-/*
+
 if (player1Score > player2Score) {
   console.log("Player 1 wins with a score of " + player1Score);
 } else if (player1Score < player2Score) {
@@ -188,7 +189,7 @@ if (player1Score > player2Score) {
 } else {
   console.log("It's a tie");
 }
-*/
+
 
 if (player1Score > player2Score && player1Score > player3Score) {
   console.log("Player 1 wins with a score of " + player1Score);
@@ -199,3 +200,30 @@ if (player1Score > player2Score && player1Score > player3Score) {
 } else {
   console.log("It's a tie");
 }
+*/
+
+////////////////////////////////////////
+//Lecture: functions
+
+function calculateAge(yearOfBirth) {
+  var age = 2018 - yearOfBirth;
+  return age;
+}
+
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1969);
+var ageMary = calculateAge(1948);
+
+function yearsUntilRetirement(name, year) {
+  var age = calculateAge(year);
+  var retirement = 65 - age;
+  if (retirement >= 0) {
+    console.log(name + " retires in " + retirement + " years.");
+  } else {
+    console.log(name + " is already retired.");
+  }
+}
+
+yearsUntilRetirement("John", 1990);
+yearsUntilRetirement("Mike", 1969);
+yearsUntilRetirement("Mary", 1948);
