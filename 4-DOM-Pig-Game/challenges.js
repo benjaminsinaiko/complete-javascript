@@ -43,6 +43,44 @@ document.querySelector(".btn-roll").addEventListener("click", function() {
   }
 });
 
+document.querySelector(".btn-hold").addEventListener("click", function() {
+  if (gamePlaying) {
+    // 1. Add CURRENT score to GLOBAL score
+    scores[activePlayer] += roundScore;
+
+    // 2. Update the UI
+    document.querySelector("#score-" + activePlayer).textContent =
+      scores[activePlayer];
+
+    var input = document.querySelector(".final-score").value;
+    var winningScore;
+
+    // Undefined, 0, null or "" are COERCED to false
+    // Anything else is COERCED to true
+    if (input) {
+      winningScore = input;
+    } else {
+      winningScore = 100;
+    }
+
+    // 3. Check if player won the game
+    if (scores[activePlayer] >= input) {
+      document.querySelector("#name-" + activePlayer).textContent = "Winner!";
+      document.querySelector(".dice").style.display = "none";
+      document
+        .querySelector(".player-" + activePlayer + "-panel")
+        .classList.add("winner");
+      document
+        .querySelector(".player-" + activePlayer + "-panel")
+        .classList.remove("active");
+      gamePlaying = false;
+    } else {
+      // 4. Next player
+      nextPlayer();
+    }
+  }
+});
+
 function nextPlayer() {
   // Next player
   activePlayer === 0 ? (activePlayer = 1) : (activePlayer = 0);
