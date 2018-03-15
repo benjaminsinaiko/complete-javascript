@@ -380,12 +380,19 @@ for (var j = 0; j < names.length; j++) {
 for (var k = names.length - 1; k >= 0; k--) {
   console.log(names[k]);
 }
-*/
+
 // while loops
 var i = 0;
 while (i < names.length) {
   console.log(names[i]);
   i++;
+}
+
+for (var j = 1; j <= 5; j++) {
+  if (j === 3) {
+    break;
+  }
+  console.log(j);
 }
 
 for (var k = 1; k <= 5; k++) {
@@ -394,3 +401,85 @@ for (var k = 1; k <= 5; k++) {
   }
   console.log(k);
 }
+*/
+
+////////////////////////////////////////
+// CODING CHALLENGE 2
+
+/*
+1. Create an array with some years where persons were born
+2. Create an empty array (just [] )
+3. Use a loop to fill the array with the ages of the persons
+4. Use another loop to log into the console whether each person is of full age (18 or older), as well as their age
+5. Finally, create a function called printFullAge which receives the array of years as an argument, executes the steps 2., 3., an 4. and returns a array of true/false boolean values: true if the person is of full age (>= 18 years) and false if not (< 18 years)
+6. Call the function with two different arrays and store the results in two variables: full_1 and full_2
+
+Example input: [1965, 2008, 1992]
+Example output: [true, false, true]
+
+Hint: you can use a loop not only to read from an array, like y[i], but also to set values in an array, like y[i] = ... You can also use the sepcific array methods.
+*/
+/*
+var birthYears = [2010, 2000, 1990, 1980, 1970];
+var ages = [];
+
+for (var i = 0; i < birthYears.length; i++) {
+  ages.push(2018 - birthYears[i]);
+}
+console.log(ages);
+
+for (var j = 0; j < ages.length; j++) {
+  if (ages[j] >= 18) {
+    console.log(
+      "Person " +
+        (j + 1) +
+        " is of full age. They are " +
+        ages[j] +
+        " years old."
+    );
+  } else {
+    console.log(
+      "Person " +
+        (j + 1) +
+        " is NOT of full age. They are " +
+        ages[j] +
+        " years old."
+    );
+  }
+}
+*/
+
+function printFullAge(years) {
+  var ages = [];
+  var fullAges = [];
+
+  for (var i = 0; i < years.length; i++) {
+    ages.push(2018 - years[i]);
+  }
+  for (var j = 0; j < ages.length; j++) {
+    if (ages[j] >= 18) {
+      fullAges.push(true);
+      console.log(
+        "Person " +
+          (j + 1) +
+          " is of full age. They are " +
+          ages[j] +
+          " years old."
+      );
+    } else {
+      fullAges.push(false);
+      console.log(
+        "Person " +
+          (j + 1) +
+          " is NOT of full age. They are " +
+          ages[j] +
+          " years old."
+      );
+    }
+  }
+  return fullAges;
+}
+
+var years = [2010, 1985, 1994, 2014, 1973];
+var full_1 = printFullAge(years);
+var full_2 = printFullAge([1965, 2008, 1992]);
