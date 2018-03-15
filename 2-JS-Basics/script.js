@@ -448,7 +448,7 @@ for (var j = 0; j < ages.length; j++) {
   }
 }
 */
-
+/*
 function printFullAge(years) {
   var ages = [];
   var fullAges = [];
@@ -483,3 +483,4 @@ function printFullAge(years) {
 var years = [2010, 1985, 1994, 2014, 1973];
 var full_1 = printFullAge(years);
 var full_2 = printFullAge([1965, 2008, 1992]);
+*/
