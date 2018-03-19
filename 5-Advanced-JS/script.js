@@ -132,7 +132,7 @@ console.log(rates);
 
 /////////////////////////////////
 //  Functions returning functions
-
+/*
 function interviewQuestion(job) {
   if (job === "designer") {
     return function(name) {
@@ -156,3 +156,20 @@ teacherQuestion("John");
 designerQuestion("John");
 
 interviewQuestion("teacher")("Mark");
+*/
+
+/////////////////////////////////
+//  IIFE
+
+function game() {
+  var score = Math.random() * 10;
+  console.log(score >= 5);
+}
+game();
+
+(function(goodLuck) {
+  var score = Math.random() * 10;
+  console.log(score >= 5 - goodLuck);
+})(5);
+
+
