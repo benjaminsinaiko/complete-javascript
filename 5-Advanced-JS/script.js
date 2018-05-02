@@ -210,7 +210,7 @@ interviewQuestion("teacher")("John");
 
 /////////////////////////////////
 // Bind, call and apply
-
+/*
 var john = {
   name: "John",
   age: 26,
@@ -270,3 +270,5 @@ var ages = arrayCalc(years, calculateAge);
 var fullJapan = arrayCalc(ages, isFullAge.bind(this, 20));
 console.log(ages);
 console.log(fullJapan);
+*/
+
