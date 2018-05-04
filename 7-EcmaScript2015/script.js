@@ -78,36 +78,65 @@
 ////////////////////////////////////////
 // Lecture: Strings
 
-let firstName = 'John';
-let lastName = 'Smith';
-const yearOfBirth = 1990;
-function calculateAge(year) {
-  return 2018 - year;
-}
+// let firstName = 'John';
+// let lastName = 'Smith';
+// const yearOfBirth = 1990;
+// function calculateAge(year) {
+//   return 2018 - year;
+// }
 
-// ES%
-console.log(
-  'This is ' +
-    firstName +
-    ' ' +
-    lastName +
-    '. He was born in ' +
-    yearOfBirth +
-    '. Today, he is ' +
-    calculateAge(yearOfBirth) +
-    ' years old.'
-);
+// // ES%
+// console.log(
+//   'This is ' +
+//     firstName +
+//     ' ' +
+//     lastName +
+//     '. He was born in ' +
+//     yearOfBirth +
+//     '. Today, he is ' +
+//     calculateAge(yearOfBirth) +
+//     ' years old.'
+// );
+
+// // ES6
+// console.log(
+//   `This is ${firstName} ${lastName}. He was born in ${yearOfBirth}. Today, he is ${calculateAge(
+//     yearOfBirth
+//   )} years old.`
+// );
+
+// const n = `${firstName} ${lastName}`;
+// console.log(n.startsWith('J'));
+// console.log(n.endsWith('th'));
+// console.log(n.includes(' '));
+// console.log(firstName.repeat(5));
+// console.log(`${firstName} `.repeat(5));
+
+////////////////////////////////////////
+// Lecture: Arrow functions - basics
+
+const years = [1990, 1965, 1982, 1937];
+
+// ES5
+var ages5 = years.map(function(el) {
+  return 2018 - el;
+});
+console.log(ages5);
 
 // ES6
-console.log(
-  `This is ${firstName} ${lastName}. He was born in ${yearOfBirth}. Today, he is ${calculateAge(
-    yearOfBirth
-  )} years old.`
-);
 
-const n = `${firstName} ${lastName}`;
-console.log(n.startsWith('J'));
-console.log(n.endsWith('th'));
-console.log(n.includes(' '));
-console.log(firstName.repeat(5));
-console.log(`${firstName} `.repeat(5));
+// Simple
+let ages6 = years.map(el => 2018 - el);
+console.log(ages6);
+
+// More than one element
+ages6 = years.map((el, index) => `Age element ${index + 1}: ${2018 - el}.`);
+console.log(ages6);
+
+// More than one line
+ages6 = years.map((el, index) => {
+  const now = new Date().getFullYear();
+  const age = now - el;
+  return `Age element ${index + 1}: ${age}.`;
+});
+console.log(ages6);
