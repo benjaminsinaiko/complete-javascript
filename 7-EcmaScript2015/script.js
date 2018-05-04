@@ -12,46 +12,65 @@
 // name6 = 'Jane Miller';
 // console.log(name6);
 
-// ES5
-function driversLicence(passedTest) {
-  if (passedTest) {
-    console.log(firstName);
-    var firstName = 'John';
-    var yearOfBirth = 1990;
-  }
-  console.log(
-    firstName +
-      ', born in ' +
-      yearOfBirth +
-      ', is now officially allowed to drive a car.'
-  );
-}
+// // ES5
+// function driversLicence(passedTest) {
+//   if (passedTest) {
+//     console.log(firstName);
+//     var firstName = 'John';
+//     var yearOfBirth = 1990;
+//   }
+//   console.log(
+//     firstName +
+//       ', born in ' +
+//       yearOfBirth +
+//       ', is now officially allowed to drive a car.'
+//   );
+// }
 
-driversLicence(true);
+// driversLicence(true);
+
+// // ES6
+// function driversLicence6(passedTest) {
+//   // console.log(firstName);
+//   let firstName;
+//   const yearOfBirth = 1990;
+
+//   if (passedTest) {
+//     firstName = 'John';
+//   }
+//   console.log(
+//     firstName +
+//       ', born in ' +
+//       yearOfBirth +
+//       ', is now officially allowed to drive a car.'
+//   );
+// }
+
+// driversLicence6(true);
+
+// let i = 23;
+
+// for (let i = 0; i < 5; i++) {
+//   console.log(i); // 0..5
+// }
+
+// console.log(i); // 23
+
+////////////////////////////////////////
+// Lecture: Blocks and IIFEs
 
 // ES6
-function driversLicence6(passedTest) {
-  // console.log(firstName);
-  let firstName;
-  const yearOfBirth = 1990;
-
-  if (passedTest) {
-    firstName = 'John';
-  }
-  console.log(
-    firstName +
-      ', born in ' +
-      yearOfBirth +
-      ', is now officially allowed to drive a car.'
-  );
+{
+  const a = 1;
+  let b = 2;
+  var c = 3;
 }
+// console.log(a + b);
+console.log(c);
 
-driversLicence6(true);
+// ES5
+(function() {
+  var d = 3;
+})();
 
-let i = 23;
-
-for (let i = 0; i < 5; i++) {
-  console.log(i); // 0..5
-}
-
-console.log(i); // 23
+console.log(d);
