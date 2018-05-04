@@ -15,6 +15,7 @@
 // ES5
 function driversLicence(passedTest) {
   if (passedTest) {
+    console.log(firstName);
     var firstName = 'John';
     var yearOfBirth = 1990;
   }
@@ -30,6 +31,7 @@ driversLicence(true);
 
 // ES6
 function driversLicence6(passedTest) {
+  // console.log(firstName);
   let firstName;
   const yearOfBirth = 1990;
 
@@ -45,3 +47,11 @@ function driversLicence6(passedTest) {
 }
 
 driversLicence6(true);
+
+let i = 23;
+
+for (let i = 0; i < 5; i++) {
+  console.log(i); // 0..5
+}
+
+console.log(i); // 23
