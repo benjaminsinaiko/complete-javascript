@@ -1,5 +1,6 @@
 import Search from './models/Search'
 import Recipe from './models/Recipe'
+import List from './models/List'
 import * as searchView from './views/searchView'
 import * as recipeView from './views/recipeView'
 import { elements, renderLoader, clearLoader } from './views/base'
@@ -62,7 +63,6 @@ elements.searchResPages.addEventListener('click', e => {
 const controlRecipe = async () => {
   // Get ID from url
   const id = window.location.hash.replace('#', '')
-  console.log(id)
 
   if (id) {
     // Prepare UI for changes
@@ -74,7 +74,6 @@ const controlRecipe = async () => {
 
     // Create new recipe object
     state.recipe = new Recipe(id)
-    console.log(state.recipe)
 
     try {
       // Get recipe data and parse ingredients
@@ -90,7 +89,7 @@ const controlRecipe = async () => {
       clearLoader()
       recipeView.renderRecipe(state.recipe)
     } catch (err) {
-      console.log('Error processing recipe!')
+      alert('Error processing recipe!')
     }
   }
 }
@@ -114,5 +113,6 @@ elements.recipe.addEventListener('click', e => {
     state.recipe.updateServings('inc')
     recipeView.updateServingsIngredients(state.recipe)
   }
-  console.log(state.recipe)
 })
+
+window.l = new List()
