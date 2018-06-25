@@ -370,7 +370,7 @@ for (var i = 0; i < 10; i++) {
   console.log(i);
 }
 */
-var names = ["John", "Jane", "Mary", "Mark", "Bob"];
+// var names = ["John", "Jane", "Mary", "Mark", "Bob"];
 /*
 // for loops
 for (var j = 0; j < names.length; j++) {
@@ -484,3 +484,34 @@ var years = [2010, 1985, 1994, 2014, 1973];
 var full_1 = printFullAge(years);
 var full_2 = printFullAge([1965, 2008, 1992]);
 */
+
+////////////////////////////////////////
+// Operator precedence
+let now = 2018
+let yearJohn = 1989
+let fullAge = 18
+
+// Mulitple operators
+let isFullAge = now - yearJohn >= fullAge
+console.log(isFullAge)
+
+// Grouping
+let ageJohn = now - yearJohn
+let ageMark = 35
+let average = (ageJohn + ageMark) / 2
+console.log(average)
+
+// Multiple assignments
+let x, y
+x = y = (3 + 5) * 4 - 6 // 8 * 4 - 6 // 32 - 6 // 26
+console.log(x, y)
+
+// More operators
+x *= 2
+console.log(x)
+x += 10
+console.log(x)
+x++
+console.log(x)
+x--
+console.log(x)
